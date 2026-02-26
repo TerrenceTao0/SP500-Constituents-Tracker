@@ -14,7 +14,13 @@ tracker = ConstituentsTracker(
 )
 </pre>
 
-## Parameter Functions 
+## Input definitions
+<pre>
+Date: String / Date / Timestamp 
+Ticker: String 
+</pre>
+
+## Parameter functions 
 <pre>
 tickers = tracker.get_tickers_at(
   "2000-01-01"                                 # [REQUIRED] Date 
@@ -58,7 +64,7 @@ days = tracker.ticker_lifetime(
 # Output: 10906 
 </pre>
 
-## Parameterless Functions 
+## Parameterless functions 
 <pre>
 tracker.clear_cache()
 </pre>
