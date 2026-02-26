@@ -6,7 +6,7 @@ Allows you to find the constituents of the SP500 and other useful details at spe
 from tracker import ConstituentsTracker
 
 tracker = ConstituentsTracker(
-    universe_file="sp500_history.csv",    # [REQUIRED] Path file to CSV containing historical constituents
+    universe_file="sp500_history.csv",         # [REQUIRED] Path file to CSV containing historical constituents
     date_format="%Y-%m-%d",                    # [OPTIONAL] Format of your date column
     tickers_column="tickers",                  # [OPTIONAL] Name of the column containing tickers
     ticker_seperator=","                       # [OPTIONAL] Character separating the list of tickers
