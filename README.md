@@ -1,5 +1,5 @@
 # SP500-Constituents-Tracker
-Allows you to find the constituents of the SP500 and other useful information at specified dates. This can be used to eliminate survivorship bias in backtesting. This also works for any universe with a column for "date" and a column for "tickers". The code will let you define the names for each column if they are named differently. Note that the given SP500 constituents history data only goes as far back as 1996-01-02 and as recent as 2025-11-11
+Allows you to find the constituents of the SP500 and other useful details at specified dates. This can be used to eliminate survivorship bias in backtesting. Results are cached for improved performance. The code also works for any universe data set with a column for "date" and a column for "tickers". The code will let you define the names for each column if they are named differently. Note that the given SP500 constituents history data only goes as far back as 1996-01-02 and as recent as 2025-11-11
 
 ## Initialisation 
 <pre>
@@ -49,4 +49,15 @@ date = tracker.ticker_last_seen(
   "AAPL"                                       # [REQUIRED] Ticker 
 )
 # Output: 2025-11-11 
+</pre>
+
+<pre>
+days = tracker.ticker_lifetime(
+  "AAPL"                                       # [REQUIRED] Ticker 
+)
+# Output: 10906 
+</pre>
+
+<pre>
+tracker.clear_cache()
 </pre>
