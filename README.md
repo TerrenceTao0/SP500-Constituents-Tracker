@@ -3,27 +3,31 @@ Allows you to find the constituents of the SP500 at a specific date. This can be
 
 ## Initialisation 
 <pre>
-    
 from tracker import ConstituentsTracker
 
 tracker = ConstituentsTracker(
     universe_file="data/sp500_history.csv",    # [REQUIRED] CSV file containing historical constituents
-    date_format="%Y-%m-%d",**                  # [REQUIRED] Format of your date column
+    date_format="%Y-%m-%d",**                  # [OPTIONAL] Format of your date column
     tickers_column="tickers",**                # [OPTIONAL] Name of the column containing tickers
     ticker_seperator=","**                     # [OPTIONAL] Character separating the list of tickers
 )
+</pre>
 
 ## Functions 
+<pre>
 tickers = tracker.get_tickers_at(
   "2000-01-01"                                 # [REQUIRED] Date 
 )
 # Output: ['AAPL', 'MSFT', 'IBM', ...]
+</pre>
 
+<pre>
 exists = tracker.ticker_exists(
   "AAPL"                                       # [REQUIRED] Ticker 
   "2000-01-01"                                 # [REQUIRED] Date
 )
 # Output: True (Boolean)
+</pre>
 
 universe_size = tracker.universe_size_at(
   "2000-01-01"                                 # [REQUIRED] Date
@@ -33,6 +37,4 @@ universe_size = tracker.universe_size_at(
 date = tracker.ticker_first_seen(
   "AAPL"                                       # [REQUIRED] Ticker 
 )
-# Output: 492 
-    
-</pre>
+# Output: 1996-01-02 
