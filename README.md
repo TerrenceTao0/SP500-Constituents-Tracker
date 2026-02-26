@@ -36,7 +36,7 @@ universe_size = tracker.universe_size_at(
 # Output: 492 
 </pre>
 
-<pre>   
+<pre>
 date = tracker.ticker_first_seen(
   "AAPL"                                       # [REQUIRED] Ticker 
 )
