@@ -1,4 +1,4 @@
-import datetime as dt 
+import datetime as dt
 from tracker import ConstituentsTracker
 
 # 
@@ -25,4 +25,8 @@ if __name__ == "__main__":
     # Check the last date a given ticker was part of the universe.
     date = sp500_tracker.ticker_last_seen("AAPL")
 
-    print(date)
+    # Check how long a given ticker was part of the universe.
+    days = sp500_tracker.ticker_lifetime("AAPL")
+
+    # Clear the cache of previously aquired data.
+    sp500_tracker.clear_cache()
