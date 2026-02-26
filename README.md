@@ -29,12 +29,16 @@ exists = tracker.ticker_exists(
 # Output: True (Boolean)
 </pre>
 
+<pre>
 universe_size = tracker.universe_size_at(
   "2000-01-01"                                 # [REQUIRED] Date
 )
 # Output: 492 
+</pre>
 
+<pre>   
 date = tracker.ticker_first_seen(
   "AAPL"                                       # [REQUIRED] Ticker 
 )
 # Output: 1996-01-02 
+</pre>
