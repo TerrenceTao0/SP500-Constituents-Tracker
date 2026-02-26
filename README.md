@@ -10,6 +10,7 @@ tracker = ConstituentsTracker(
     date_format="%Y-%m-%d",                    # [OPTIONAL] Format of your date column
     tickers_column="tickers",                  # [OPTIONAL] Name of the column containing tickers
     ticker_seperator=","                       # [OPTIONAL] Character separating the list of tickers
+    date_column="date"                         # [OPTIONAL] Name of the column containing dates
 )
 </pre>
 
